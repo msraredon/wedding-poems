@@ -156,25 +156,46 @@ def poem_html(poem, cfg, g, proof=False):
 
 
 def name_html(name, cfg, g, proof=False):
+    """Place the guest name at a configurable corner, inset from the TRIM edge."""
     nf = cfg["name_face"]
     font = nf["font"]
-    pos = nf.get("position", "top-center")
-    top = float(nf.get("margin_from_top", 0.6))
     pt = nf.get("font_pt", 24)
-    justify = {"top-left": "flex-start", "top-right": "flex-end",
-               "top-center": "center", "center": "center"}.get(pos, "center")
-    align_items = "center" if pos == "center" else "flex-start"
-    pad_top = "0" if pos == "center" else f"{g['safe'] + top - g['safe']:.4f}in"
-    # place name near top: distance from safe-box top = margin_from_top - safe
-    top_offset = max(0.0, top - g["safe"])
-    body = f"""<div class="page">
-      <div class="safe" style="align-items:{align_items};justify-content:{justify};">
-        <div id="content" style="padding-top:{top_offset}in;">
-          <span class="name">{html.escape(name)}</span>
-        </div>
-      </div>{guides_html(g, proof)}</div>"""
-    extra = f".name {{ font-size:{pt}pt; color:#111; }}"
-    return page_shell(g, body, font, extra)
+    pos = str(nf.get("position", "bottom-left")).lower().strip()
+    margin = float(nf.get("margin", nf.get("margin_from_top", 0.4)))
+    inset = g["bleed"] + margin  # page edge -> name (trim edge + margin)
+
+    if pos == "center":
+        vert, horiz = "center", "center"
+    else:
+        parts = (pos.split("-") + ["", ""])[:2]
+        vert = parts[0] if parts[0] in ("top", "center", "bottom") else "bottom"
+        horiz = parts[1] if parts[1] in ("left", "center", "right") else "left"
+
+    s = ["position:absolute"]
+    if vert == "top":
+        s.append(f"top:{inset}in")
+    elif vert == "bottom":
+        s.append(f"bottom:{inset}in")
+    else:
+        s.append("top:50%")
+    if horiz == "left":
+        s.append(f"left:{inset}in"); text_align = "left"
+    elif horiz == "right":
+        s.append(f"right:{inset}in"); text_align = "right"
+    else:
+        s.append("left:50%"); text_align = "center"
+    tx = "-50%" if horiz == "center" else "0"
+    ty = "-50%" if vert == "center" else "0"
+    if (tx, ty) != ("0", "0"):
+        s.append(f"transform:translate({tx},{ty})")
+    s += [f"font-family:{font}", f"font-size:{pt}pt", "color:#111",
+          f"text-align:{text_align}",
+          "max-width:%.4fin" % (g["trim_w"] - 2 * margin)]
+
+    body = (f'<div class="page">'
+            f'<div class="name" style="{";".join(s)}">{html.escape(name)}</div>'
+            f'{guides_html(g, proof)}</div>')
+    return page_shell(g, body, font, "")
 
 
 # ---------------------------------------------------------------- rendering

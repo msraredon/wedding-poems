@@ -88,9 +88,33 @@ Each `images/hires/<book>/` folder has a `source.yaml` with the book's title,
 author/editor, translator, etc. If a poem's own `author`/`title` is blank, layout
 falls back to the folder's `source.yaml`. Fill these in once per book.
 
+## Running the pipeline
+
+```bash
+source .venv/bin/activate          # deps: pyyaml, openpyxl, pypdf (+ system Chrome)
+
+# Stage 2 — render one poem's faces (proof mode draws trim/safe guides)
+python3 scripts/render_faces.py --poem poems/poem-005.yaml --name "Ada Lovelace" --proof
+
+# Stage 3 — full delivery PDF from a guest sheet
+python3 scripts/build_pdf.py --guests guests.xlsx
+#   refuses unverified poems by default; add --allow-unverified for a PROOF only
+```
+
+Outputs land in `build/` (gitignored): `wedding-favors.pdf` + `manifest.csv`,
+plus per-face PDFs/PNGs in `build/faces/`.
+
 ## Status
 
-Stage 0 (scaffold) complete. Stage 1 transcription proven on a 7-poem test batch
-(5/7 clean on two-pass agreement; 2 flagged for hand-correction). Scripts are
-still stubs — we transcribe in-session for now. Implementation proceeds one stage
-at a time, checking outputs together before moving on.
+- **Stage 0 (scaffold):** done.
+- **Stage 1 (transcribe):** proven on a 7-poem test batch (5/7 clean on two-pass
+  agreement; 2 flagged for hand-correction). In-session for now; `transcribe.py`
+  API script still a stub.
+- **Stage 2 (render faces):** done — HTML/CSS → PDF via headless Chrome, JS
+  auto-fit, EB Garamond, bleed + safe margins, configurable name corner.
+- **Stage 3 (assemble):** done — guests.xlsx → one-favor-per-page delivery PDF,
+  with the verified-poem safety gate.
+
+Remaining before a real print run: fill `source.yaml` metadata, hand-fix
+poems 004 & 007, verify poems (`verified: true`), build the real `guests.xlsx`,
+move `images/hires/` to git-lfs, and pick a printer (confirm bleed/format).

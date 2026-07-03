@@ -28,9 +28,13 @@ poem_face:
 name_face:
   font: "EB Garamond, Baskerville, Palatino, serif"
   font_pt: 24
-  position: top-center             # top-center | top-left | top-right | center
-  # Names sit well inside the trim so duplex drift + rolling never clip them.
-  margin_from_top: 0.6             # inches
+  # Corner/anchor for the name: {top,center,bottom}-{left,center,right} or "center".
+  # bottom-left = when the scroll is rolled up from the bottom of the poem face,
+  # the name ends up on top, right-way-up.
+  position: bottom-left
+  # Distance (inches) from the trim edge(s) to the name. Keep >= safe_margin so
+  # duplex drift + rolling never clip it.
+  margin: 0.4
 
 # --- Rendering ---------------------------------------------------------------
 render:
