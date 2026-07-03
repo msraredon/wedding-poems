@@ -32,9 +32,10 @@ name_face:
   # bottom-left = when the scroll is rolled up from the bottom of the poem face,
   # the name ends up on top, right-way-up.
   position: bottom-left
-  # Distance (inches) from the trim edge(s) to the name. Keep >= safe_margin so
-  # duplex drift + rolling never clip it.
-  margin: 0.4
+  # Distance (inches) from the TRIM edge to the name. 0.125" (1/8") is about the
+  # tightest that's safe for text against cut drift — the name sits hard in the
+  # bottom-left corner. Increase if your printer wants a larger safety margin.
+  margin: 0.125
   small_caps: true                 # true small caps (capitals stay a bit larger)
   letter_spacing: 0.04             # em; light tracking suits small caps
   # The name always renders on ONE line. If a very long name would reach the far
