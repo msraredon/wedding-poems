@@ -133,10 +133,10 @@ def poem_html(poem, cfg, g, proof=False):
     content = f'<div id="content">{"".join(parts)}</div>'
     body = f'<div class="page"><div class="safe">{content}</div>{guides_html(g, proof)}</div>'
     extra = f"""
-#content {{ text-align:{align}; line-height:{lh}; color:#111; }}
-.title {{ font-size:0.92em; letter-spacing:0.06em; margin-bottom:0.20in; }}
-.poem  {{ white-space:pre; }}
-.author {{ font-style:italic; font-size:0.78em; margin-top:0.24in; }}
+#content {{ line-height:{lh}; color:#111; }}
+.title {{ text-align:center; font-size:0.92em; letter-spacing:0.06em; margin-bottom:0.20in; }}
+.poem  {{ text-align:{align}; white-space:pre; }}
+.author {{ text-align:center; font-style:italic; font-size:0.78em; margin-top:0.24in; }}
 <!--fit-->"""
     js = f"""
 <script>
@@ -188,9 +188,14 @@ def name_html(name, cfg, g, proof=False):
     ty = "-50%" if vert == "center" else "0"
     if (tx, ty) != ("0", "0"):
         s.append(f"transform:translate({tx},{ty})")
+    maxw = (float(nf["max_width"]) if nf.get("max_width") not in (None, "")
+            else g["trim_w"] - 2 * margin)
     s += [f"font-family:{font}", f"font-size:{pt}pt", "color:#111",
-          f"text-align:{text_align}",
-          "max-width:%.4fin" % (g["trim_w"] - 2 * margin)]
+          f"text-align:{text_align}", "max-width:%.4fin" % maxw]
+    if bool(nf.get("uppercase", False)):
+        s.append("text-transform:uppercase")
+    if nf.get("letter_spacing"):
+        s.append(f"letter-spacing:{nf['letter_spacing']}em")
 
     body = (f'<div class="page">'
             f'<div class="name" style="{";".join(s)}">{html.escape(name)}</div>'

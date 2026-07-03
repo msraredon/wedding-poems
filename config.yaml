@@ -22,12 +22,12 @@ poem_face:
   body_font: "EB Garamond, Baskerville, Palatino, serif"
   attribution_font: "EB Garamond, Baskerville, Palatino, serif"
   line_height: 1.35
-  align: center                    # poem block centered on the face
+  align: left                      # poem lines left-justified (title + author stay centered)
 
 # --- Name face (the outside of the scroll) -----------------------------------
 name_face:
   font: "EB Garamond, Baskerville, Palatino, serif"
-  font_pt: 24
+  font_pt: 14                      # smaller so the name stays clear of the ribbon
   # Corner/anchor for the name: {top,center,bottom}-{left,center,right} or "center".
   # bottom-left = when the scroll is rolled up from the bottom of the poem face,
   # the name ends up on top, right-way-up.
@@ -35,6 +35,11 @@ name_face:
   # Distance (inches) from the trim edge(s) to the name. Keep >= safe_margin so
   # duplex drift + rolling never clip it.
   margin: 0.4
+  uppercase: true                  # ALL-CAPS Garamond
+  letter_spacing: 0.08             # em; caps read better with a little tracking
+  # Cap the name's width so it stays on the LEFT side of the page, clear of the
+  # ribbon; long names wrap onto more lines instead of crossing the page.
+  max_width: 1.8                   # inches
 
 # --- Rendering ---------------------------------------------------------------
 render:
