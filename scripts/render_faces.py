@@ -188,19 +188,35 @@ def name_html(name, cfg, g, proof=False):
     ty = "-50%" if vert == "center" else "0"
     if (tx, ty) != ("0", "0"):
         s.append(f"transform:translate({tx},{ty})")
-    maxw = (float(nf["max_width"]) if nf.get("max_width") not in (None, "")
-            else g["trim_w"] - 2 * margin)
     s += [f"font-family:{font}", f"font-size:{pt}pt", "color:#111",
-          f"text-align:{text_align}", "max-width:%.4fin" % maxw]
+          f"text-align:{text_align}", "white-space:nowrap"]
     if bool(nf.get("uppercase", False)):
         s.append("text-transform:uppercase")
+    if bool(nf.get("small_caps", False)):
+        s += ["font-variant-caps:small-caps", "font-variant:small-caps"]
     if nf.get("letter_spacing"):
         s.append(f"letter-spacing:{nf['letter_spacing']}em")
 
+    # width from the name's start to the far safe edge — the one-line fit budget
+    if horiz == "center":
+        avail_in = g["safe_w"]
+    else:
+        avail_in = g["trim_w"] - g["safe"] - margin
+
     body = (f'<div class="page">'
-            f'<div class="name" style="{";".join(s)}">{html.escape(name)}</div>'
+            f'<div id="name" style="{";".join(s)}">{html.escape(name)}</div>'
             f'{guides_html(g, proof)}</div>')
-    return page_shell(g, body, font, "")
+    js = f"""
+<script>
+(function(){{
+  var el=document.getElementById('name'), maxpx={avail_in:.4f}*96, pt={pt};
+  el.style.fontSize=pt+'pt';
+  for(var i=0;i<5 && el.scrollWidth>maxpx;i++){{
+    pt=pt*maxpx/el.scrollWidth; el.style.fontSize=pt+'pt';
+  }}
+}})();
+</script>"""
+    return page_shell(g, body, font, "") + js
 
 
 # ---------------------------------------------------------------- rendering

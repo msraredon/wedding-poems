@@ -27,7 +27,7 @@ poem_face:
 # --- Name face (the outside of the scroll) -----------------------------------
 name_face:
   font: "EB Garamond, Baskerville, Palatino, serif"
-  font_pt: 14                      # smaller so the name stays clear of the ribbon
+  font_pt: 13                      # commensurate with the inside poem body text
   # Corner/anchor for the name: {top,center,bottom}-{left,center,right} or "center".
   # bottom-left = when the scroll is rolled up from the bottom of the poem face,
   # the name ends up on top, right-way-up.
@@ -35,11 +35,10 @@ name_face:
   # Distance (inches) from the trim edge(s) to the name. Keep >= safe_margin so
   # duplex drift + rolling never clip it.
   margin: 0.4
-  uppercase: true                  # ALL-CAPS Garamond
-  letter_spacing: 0.08             # em; caps read better with a little tracking
-  # Cap the name's width so it stays on the LEFT side of the page, clear of the
-  # ribbon; long names wrap onto more lines instead of crossing the page.
-  max_width: 1.8                   # inches
+  small_caps: true                 # true small caps (capitals stay a bit larger)
+  letter_spacing: 0.04             # em; light tracking suits small caps
+  # The name always renders on ONE line. If a very long name would reach the far
+  # safe margin it auto-shrinks to fit (never wraps, never crosses the trim).
 
 # --- Rendering ---------------------------------------------------------------
 render:
