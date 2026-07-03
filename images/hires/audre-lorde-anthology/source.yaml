@@ -1,0 +1,11 @@
+# Source (book) metadata for poems photographed from this folder.
+# Fill in what you know; leave blank if unknown. Poem-level title/author live in
+# the poem YAML — if a poem's author is blank there, layout can fall back to the
+# `author` below (useful for single-author books; leave blank for anthologies).
+book_title: ""      # CONFIRM — collection/anthology title this came from
+author: ""          # if single-author (Audre Lorde?); leave blank if an anthology
+editor: ""          # for anthologies / edited collections
+translator: ""
+publisher: ""
+year: ""
+notes: "Contains poem-001 'For Judith'."

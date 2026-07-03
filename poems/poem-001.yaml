@@ -1,0 +1,26 @@
+id: poem-001
+title: "For Judith"
+author: ""              # not printed on the page — confirm from the book
+source: "audre-lorde-anthology"
+images:
+  - "audre-lorde-anthology/IMG_7340.HEIC"
+verified: false        # flip to true ONLY after a human proofreads against the photo
+verified_by: ""        # your name/initials when you verify
+verified_date: ""      # YYYY-MM-DD when you verify
+notes: >-
+  Two independent passes agree exactly. Stanza break after "boulders" confirmed
+  by both. No author printed on this page (folder is an anthology, so the author
+  is not necessarily Audre Lorde) — fill in by hand.
+text: |
+  Hanging out
+  means being
+  together
+  upon the earth
+  boulders
+
+  crape myrtle trees
+  fox and deer
+  at the watering hole
+  not quite together
+  but learning
+  each other's ways.

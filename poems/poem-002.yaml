@@ -1,0 +1,23 @@
+id: poem-002
+title: ""               # not printed — excerpt, confirm how you want it titled
+author: ""              # not printed on the page
+source: "boy-mole-fox-horse"
+images:
+  - "boy-mole-fox-horse/IMG_7130.HEIC"
+verified: false        # flip to true ONLY after a human proofreads against the photo
+verified_by: ""        # your name/initials when you verify
+verified_date: ""      # YYYY-MM-DD when you verify
+notes: >-
+  Handwritten-style font. Two passes agree exactly. Page shows only the page
+  number "3"; title/author not printed. Likely from "The Boy, the Mole, the Fox
+  and the Horse" by Charlie Mackesy — confirm before use.
+text: |
+  "I'm so small," said
+  the mole.
+
+  "Yes," said
+  the boy.
+
+  "but you
+  make a huge
+  difference."

@@ -1,0 +1,19 @@
+id: poem-003
+title: ""               # not printed on the crop
+author: ""              # not printed on the crop
+source: "haikus"
+images:
+  - "haikus/IMG_7256.heic"
+verified: false        # flip to true ONLY after a human proofreads against the photo
+verified_by: ""        # your name/initials when you verify
+verified_date: ""      # YYYY-MM-DD when you verify
+notes: >-
+  Bilingual haiku: English translation, then Japanese (kanji/kana), then romaji.
+  Two passes agree exactly. Line 2 is indented in the original. Author not on the
+  crop — fill in by hand.
+text: |
+  autumn's soaring sky!
+      would that I were riding the white clouds
+
+  秋高し吾白雲に乗らんと思ふ
+  akitakashi ware shirakumo ni noran to mou

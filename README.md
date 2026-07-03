@@ -68,7 +68,29 @@ High-res photos are inputs (source of truth). If they bloat the repo, move them
 to [git-lfs](https://git-lfs.com) rather than deleting them. Low-res copies are
 gitignored.
 
+## Conventions
+
+### The verification tag
+Every poem YAML carries:
+- `verified: false` — set to `true` ONLY after a human reads it against the photo.
+- `verified_by:` / `verified_date:` — who checked it and when (audit trail).
+
+The build stage refuses `verified: false` poems (config `build.block_on_unverified`),
+so nothing unproofed can reach the printer.
+
+### File naming during transcription
+- `poem-NNN.yaml` — clean draft (both passes agreed).
+- `poem-NNN.DRAFT.yaml` — needs human attention (passes disagreed / low confidence /
+  hand-entry required). Rename to `poem-NNN.yaml` once corrected.
+
+### Per-folder source metadata
+Each `images/hires/<book>/` folder has a `source.yaml` with the book's title,
+author/editor, translator, etc. If a poem's own `author`/`title` is blank, layout
+falls back to the folder's `source.yaml`. Fill these in once per book.
+
 ## Status
 
-Stage 0 (scaffold) complete. Scripts are stubs — implementation proceeds one
-stage at a time, checking outputs together before moving on.
+Stage 0 (scaffold) complete. Stage 1 transcription proven on a 7-poem test batch
+(5/7 clean on two-pass agreement; 2 flagged for hand-correction). Scripts are
+still stubs — we transcribe in-session for now. Implementation proceeds one stage
+at a time, checking outputs together before moving on.
