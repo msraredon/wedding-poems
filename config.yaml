@@ -17,14 +17,16 @@ poem_face:
   # within this band. A 4-line poem and a 40-line poem will NOT share a size.
   font_min_pt: 8
   font_max_pt: 16
-  body_font: "EB Garamond"        # a real font must be installed; see README
-  attribution_font: "EB Garamond"
+  # CSS font-family list: first installed font wins. EB Garamond isn't installed
+  # yet, so Baskerville (on macOS) is used; install EB Garamond to auto-upgrade.
+  body_font: "EB Garamond, Baskerville, Palatino, serif"
+  attribution_font: "EB Garamond, Baskerville, Palatino, serif"
   line_height: 1.35
   align: center                    # poem block centered on the face
 
 # --- Name face (the outside of the scroll) -----------------------------------
 name_face:
-  font: "EB Garamond"
+  font: "EB Garamond, Baskerville, Palatino, serif"
   font_pt: 24
   position: top-center             # top-center | top-left | top-right | center
   # Names sit well inside the trim so duplex drift + rolling never clip them.

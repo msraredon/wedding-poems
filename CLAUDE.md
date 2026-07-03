@@ -91,11 +91,11 @@ For each favor: one **poem face** and one **name face**, sized to the favor trim
 - Name face: place the name well inside the trim (generous safe margin) so duplex drift
   + rolling never clips it. Corner/position is configurable.
 
-### Stage 3 — Impose (CONDITIONAL — confirm first)
-Only build this if *we* impose rather than the printer. If built: place N favors per
-sheet, front and back, with **correct duplex back-mirroring** and crop marks. Get the
-mirroring right — it's the easiest thing to get subtly wrong. Test with numbered dummy
-faces before real content.
+### Stage 3 — Assemble delivery PDF (imposition DROPPED)
+The print shop imposes/gangs and cuts (decided — see below), so we do NOT build
+imposition, duplex mirroring, or crop marks. Stage 3 is just: join `guests.xlsx`
+with the poems, render each face, and assemble a clean **one-favor-per-page,
+front + back, with bleed** PDF for delivery. (`scripts/build_pdf.py`.)
 
 ## config.yaml — tunables to expose
 - favor trim size (w × h) and units
@@ -104,17 +104,35 @@ faces before real content.
 - fonts (poem body, attribution, name), font min/max pt for auto-fit
 - whether unverified poems block the build
 
-## Open questions — ASK the user before Stage 1+ (do not guess)
+## Decisions (RESOLVED 2026-07-03)
 
-1. **Who imposes the pages — us or the printer?** This determines whether Stage 3
-   exists at all. Most shops prefer a clean "one favor per page, front+back, with
-   bleed" PDF and gang/cut it themselves. Confirm before building imposition.
-2. **Printer specs:** trim size, bleed amount, duplex registration tightness,
-   preferred delivery format.
-3. **Scale:** roughly how many guests and how many distinct poems?
-4. **The "4–6" parameter:** is that favors-per-sheet, or the paper dimensions in inches?
-5. **Variable length policy:** auto-fit font within a band (default), let scroll
-   *length* vary at fixed width, or constrain poem selection to a length band?
+1. **Imposition:** the **print shop** imposes/gangs/cuts. We deliver one favor per
+   page, front + back, with bleed. Stage 3 is assembly only (no mirroring/crop marks).
+2. **Printer specs:** not yet chosen. Building to the standard clean deliverable
+   above; revisit exact bleed/format when a shop is picked.
+3. **Scale:** ~120+ guests, ~70+ distinct poems.
+4. **The "4–6":** it was the **scroll trim size in inches** (~4×6). Default trim is
+   4"×6" in `config.yaml`.
+5. **Variable length policy:** **auto-fit font within a band** (default). One trim
+   size for all; the renderer shrinks each poem to fit.
+6. **Transcription route:** **in-session** — Claude reads the images directly and
+   writes the poem YAML. The API script (`scripts/transcribe.py`) remains a stub for
+   later batch use; no `ANTHROPIC_API_KEY` needed for the current workflow.
+
+## Conventions
+
+- **Verification tag:** every poem YAML has `verified: false` + `verified_by:` +
+  `verified_date:`. A human sets these after proofreading against the photo. The
+  build refuses `verified: false` (config `build.block_on_unverified`).
+- **Two-pass transcription:** each image is transcribed twice, independently
+  (in-session via parallel subagents), and the outputs are diffed. Agreements are
+  strong; disagreements are surfaced, never silently resolved.
+- **DRAFT naming:** `poem-NNN.DRAFT.yaml` = needs human attention (passes disagreed,
+  poor image, or hand-entry). Rename to `poem-NNN.yaml` once corrected.
+- **Per-folder metadata:** each `images/hires/<book>/` has a `source.yaml` (book
+  title, author/editor, translator). Poem `author`/`title` blank → fall back to it.
+- **One image can hold multiple poems** (e.g. a book spread). Intake must let the
+  human say *which* poem in an image is wanted — do not assume one image = one poem.
 
 ## Constraints
 - Poems are transcribed from books we own, in small quantity, for a private event —
