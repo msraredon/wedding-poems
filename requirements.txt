@@ -1,0 +1,7 @@
+# Install into a virtualenv:  python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+anthropic>=0.40        # Stage 1: vision transcription
+PyYAML>=6.0            # read/write poem YAML + config
+openpyxl>=3.1          # read guests.xlsx (assignment table)
+# Rendering (Stage 2) uses your installed Google Chrome via --headless
+# --print-to-pdf, so there is no Python PDF dependency to install.
+pypdf>=4.0            # merge per-favor pages into final delivery PDF(s)

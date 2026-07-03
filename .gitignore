@@ -1,0 +1,17 @@
+# Generated intermediates and final PDFs — reproducible from inputs, never committed
+build/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+
+# OS
+.DS_Store
+
+# Low-res images are backups/working copies only — keep the repo lean.
+# High-res images ARE inputs (source of truth). If they bloat the repo,
+# switch them to git-lfs rather than ignoring them. See README.
+images/lores/

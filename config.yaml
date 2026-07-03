@@ -1,0 +1,51 @@
+# =============================================================================
+# Wedding Favor Poems — all tunable parameters live here.
+# Edit this file and re-run; never hardcode these values in scripts.
+# =============================================================================
+
+# --- Favor trim (the finished size of one scroll, before rolling) ------------
+favor:
+  width: 4.0          # inches
+  height: 6.0         # inches
+  units: in
+  bleed: 0.125        # inches of art that extends past the trim on every edge
+  safe_margin: 0.25   # inches; keep all text inside this from the trim edge
+
+# --- Poem face (the inside of the scroll) ------------------------------------
+poem_face:
+  # Auto-fit: the renderer shrinks/grows the body text to fill the safe area
+  # within this band. A 4-line poem and a 40-line poem will NOT share a size.
+  font_min_pt: 8
+  font_max_pt: 16
+  body_font: "EB Garamond"        # a real font must be installed; see README
+  attribution_font: "EB Garamond"
+  line_height: 1.35
+  align: center                    # poem block centered on the face
+
+# --- Name face (the outside of the scroll) -----------------------------------
+name_face:
+  font: "EB Garamond"
+  font_pt: 24
+  position: top-center             # top-center | top-left | top-right | center
+  # Names sit well inside the trim so duplex drift + rolling never clip them.
+  margin_from_top: 0.6             # inches
+
+# --- Rendering ---------------------------------------------------------------
+render:
+  # We deliver one favor per PDF page (poem page + name page), with bleed.
+  # The PRINT SHOP imposes/gangs and cuts. We do NOT impose. No crop marks
+  # needed unless the shop asks (they add their own for ganged sheets).
+  page_order: interleave           # interleave (name,poem,name,poem...) | separate
+  crop_marks: false
+
+# --- Build policy ------------------------------------------------------------
+build:
+  # If true, the layout stage refuses to run for any poem still verified:false.
+  # This is the safety rail that keeps unchecked transcriptions off the paper.
+  block_on_unverified: true
+
+# --- Transcription (Stage 1) -------------------------------------------------
+transcribe:
+  model: "claude-sonnet-5"         # vision-capable; see scripts/transcribe.py
+  passes: 2                        # run each image N times and diff for review
+  image_source: hires             # ALWAYS transcribe from high-res
