@@ -1,0 +1,8 @@
+# Source (book) metadata.
+book_title: "Shakespeare's Sonnets"
+author: "William Shakespeare"
+editor: ""                  # CONFIRM — which edited edition?
+translator: ""
+publisher: ""              # CONFIRM — edition affects spellings (e.g. "everything")
+year: ""                   # CONFIRM
+notes: "Sonnets numbered by Roman numeral in this edition (e.g. XV, LXXV)."

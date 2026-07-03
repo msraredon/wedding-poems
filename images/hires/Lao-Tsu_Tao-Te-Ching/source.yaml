@@ -1,0 +1,10 @@
+# Source (book) metadata.
+book_title: "Tao Te Ching"
+author: "Lao Tzu"
+editor: ""
+translator: ""            # CONFIRM — MANY editions differ (e.g. Gia-Fu Feng & Jane
+                          # English, or Stephen Mitchell). Check your copy; the
+                          # translator strongly affects the exact wording.
+publisher: ""             # CONFIRM
+year: ""                  # CONFIRM
+notes: "Translator/edition unknown — please confirm from the copyright page."
