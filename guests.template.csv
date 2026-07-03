@@ -1,3 +1,8 @@
-guest_name,poem_id
-Jane Doe,poem-000
-John Smith,poem-014
+guest_name,poem_id,title,author,source,verified,note
+,poem-001,For Judith,,audre-lorde-anthology,false,
+,poem-002,,Charlie Mackesy,boy-mole-fox-horse,false,
+,poem-003,,,haikus,false,
+,poem-004,,,unknown-source,false,DRAFT — needs human fix/verify
+,poem-005,XV,William Shakespeare,william-shakespeare-shakespeares-sonnets,false,
+,poem-006,LXXV,William Shakespeare,william-shakespeare-shakespeares-sonnets,false,
+,poem-007,,Essex Hemphill,subway-poem,false,DRAFT — needs human fix/verify

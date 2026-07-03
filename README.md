@@ -93,6 +93,10 @@ falls back to the folder's `source.yaml`. Fill these in once per book.
 ```bash
 source .venv/bin/activate          # deps: pyyaml, openpyxl, pypdf (+ system Chrome)
 
+# (prep) regenerate the assignment template with titles/authors auto-filled,
+# so you can recognize each poem and just type guest names into column 1
+python3 scripts/make_guest_template.py
+
 # Stage 2 — render one poem's faces (proof mode draws trim/safe guides)
 python3 scripts/render_faces.py --poem poems/poem-005.yaml --name "Ada Lovelace" --proof
 
