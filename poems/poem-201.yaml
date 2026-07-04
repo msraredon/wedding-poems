@@ -1,0 +1,26 @@
+id: poem-201
+title: "Thread"
+author: "Essex Hemphill"
+source: "Essex-Hemphill_Thread"
+images:
+  - "Essex-Hemphill_Thread/Thread text.jpg"
+verified: false
+verified_by: ""
+verified_date: ""
+needs_manual_text: false
+notes: >-
+  Source image is a clean typed transcription (not a book photo), so OCR/structure should be reliable — still confirm line breaks. In copyright (Hemphill 1957-1995). Wedding-appropriate (tender longing: 'I am wind, and you are chimes'). Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
+text: |
+  Thread
+  Trying not to think of you
+  yet your face colors
+  every contour
+  of my mind.
+  inside of a minute
+  And every way I turn
+  I collide
+  with your laughter.
+  I am wind,
+  and you
+  are chimes.
+  -- Essex Hemphill

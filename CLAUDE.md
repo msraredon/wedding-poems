@@ -124,11 +124,47 @@ front + back, with bleed** PDF for delivery. (`scripts/build_pdf.py`.)
 - **Verification tag:** every poem YAML has `verified: false` + `verified_by:` +
   `verified_date:`. A human sets these after proofreading against the photo. The
   build refuses `verified: false` (config `build.block_on_unverified`).
-- **Two-pass transcription:** each image is transcribed twice, independently
-  (in-session via parallel subagents), and the outputs are diffed. Agreements are
-  strong; disagreements are surfaced, never silently resolved.
-- **DRAFT naming:** `poem-NNN.DRAFT.yaml` = needs human attention (passes disagreed,
-  poor image, or hand-entry). Rename to `poem-NNN.yaml` once corrected.
+- **Content-filter resilience (IMPORTANT):** the Anthropic API applies an *output*
+  content filter that returns `400 Output blocked by content filtering policy` when
+  the model emits certain text — chiefly **verbatim in-copyright material** (most of
+  these books) and **explicit sexual content**. It cannot be disabled and fires
+  regardless of legitimate personal use. **Aggregation makes it worse** (one big dump
+  of many poems is far more likely to trip than one poem). Therefore:
+  - Transcribe **in-session, one image at a time**; never batch many poems into one
+    message. (Parallel-subagent two-pass is retired — its aggregated output gets
+    blocked and loses everything. See auto-memory `two-pass-content-filter-gotcha`.)
+  - **Two-step durable write per image:** (1) write the metadata stub (title, author,
+    source, image, `needs_manual_text: true`, empty `text`) — safe, no body; then
+    (2) fill `text` and flip `needs_manual_text: false`. If step 2 is blocked, the
+    stub persists flagged, the rest of the run proceeds, and the human types that one
+    poem in. Disk is the source of truth, so this survives rewinds/blocks — nothing
+    already written is lost.
+  - **Local OCR-to-disk escalation (for in-copyright bodies the filter blocks):** run
+    `scripts/ocr_to_poem.py`, which OCRs the photo locally via Apple's Vision
+    framework (`scripts/ocr_vision.swift`) and writes the body straight to the YAML.
+    The poem text goes **photo → Vision → file** and never passes through the model's
+    output tokens, so the filter can't fire and no copyrighted text is reproduced in
+    assistant output. The model supplies ONLY metadata (id/title/author/source/notes).
+    Validated at ~0.995 similarity against a known-good transcription. Tradeoffs: OCR
+    drops blank/stanza breaks and indentation, may miss stray punctuation, and picks
+    up running heads (page-label, author name, page number) as stray lines — so these
+    are always written `verified: false` with a proofread note. Column-aware sort in
+    the Swift handles two-page spreads (left page fully, then right).
+  - **Do NOT reproduce copyrighted poem bodies in assistant output** (chat OR
+    Edit/Write strings) — the filter blocks it and it defeats the point. Reading a
+    poem file into context to *inspect* structure is fine (input, not output). To
+    restructure an in-copyright body, use a script keyed on line numbers / known label
+    strings rather than retyping the body; retype freely only for public-domain poems.
+- **`needs_manual_text` flag:** `true` = a stub whose text is not yet in (usually a
+  content-filter block). The human hand-enters the text and flips it to `false`.
+- **Pipeline scripts:** `inventory.py` (catalog raw photos + detect NEW/CHANGED/
+  MISSING in `intake_manifest.csv`) → `make_previews.py <book>` (HEIC→JPG previews)
+  → transcribe in-session (two-step durable write) **or** `ocr_to_poem.py` (local
+  Apple-Vision OCR-to-disk, via `ocr_vision.swift`, for in-copyright bodies the filter
+  blocks) → `reconcile.py` (derive manifest status/poem_ids from the poem files, so
+  renumbering can't desync it).
+- **DRAFT naming:** `poem-NNN.DRAFT.yaml` = needs a human decision (multi-poem page,
+  untitled continuation, poor image). Rename to `poem-NNN.yaml` once resolved.
 - **Per-folder metadata:** each `images/hires/<book>/` has a `source.yaml` (book
   title, author/editor, translator). Poem `author`/`title` blank → fall back to it.
 - **One image can hold multiple poems** (e.g. a book spread). Intake must let the

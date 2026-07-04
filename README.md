@@ -40,27 +40,41 @@ build/                   generated PDFs + intermediates (gitignored, disposable)
 ## The pipeline (each stage independently testable)
 
 ```
-photos ─▶ intake.py ─▶ transcribe.py ─▶ [human verifies] ─▶ build_pdf.py ─▶ PDF
-          (group into    (2-pass diff,      (flip            (join w/ guests.xlsx,
-           poems)         no silent fixes)   verified:true)    render faces)
+photos ─▶ inventory.py ─▶ make_previews.py ─▶ transcribe ─▶ reconcile.py ─▶ [human ─▶ build_pdf.py ─▶ PDF
+          (catalog +        (HEIC→JPG for      (in-session   (rebuild        verifies]  (join w/ guests.xlsx,
+           manifest)         the model to read)  or OCR)      manifest)                  render faces)
 ```
 
-1. **Intake** — group photos into poems (multi-page poem = several images).
-2. **Transcribe** — high-res photo → text, run twice and diff, human confirms.
-   Accuracy-critical: the model must not "fix" line breaks or punctuation.
-3. **Verify** — a human compares each poem to its photo and sets `verified:true`.
-4. **Build** — join with `guests.xlsx`, auto-fit each poem to the page, emit PDF.
+1. **Inventory** — `inventory.py` catalogs raw photos and flags NEW/CHANGED/MISSING
+   in `intake_manifest.csv`. Group photos into poems (a multi-page poem = several images;
+   one image can also hold several poems).
+2. **Preview** — `make_previews.py <book>` makes JPGs the model can read.
+3. **Transcribe** — high-res photo → text. Two routes, both writing one poem at a time:
+   - **In-session** (default): the model reads the photo and writes the YAML. Accuracy-
+     critical — it must not "fix" line breaks or punctuation. Two-step durable write so a
+     content-filter block never loses already-written work.
+   - **Local OCR-to-disk** (`ocr_to_poem.py`): for **in-copyright** bodies the API's output
+     content filter blocks. Text flows photo → Apple Vision (`ocr_vision.swift`) → file,
+     never through the model; the model supplies only metadata. Written `verified: false`
+     with a proofread note (OCR drops stanza breaks/indentation and grabs running heads).
+4. **Reconcile** — `reconcile.py` rederives manifest status/poem_ids from the poem files,
+   so renumbering can't desync it.
+5. **Verify** — a human compares each poem to its photo and sets `verified: true`.
+6. **Build** — join with `guests.xlsx`, auto-fit each poem to the page, emit PDF.
 
 ## Setup
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-export ANTHROPIC_API_KEY=sk-...        # for transcription
+export ANTHROPIC_API_KEY=sk-...        # only for the batch transcribe.py stub (unused in the current in-session workflow)
 ```
 
 Rendering uses your installed Google Chrome (`--headless --print-to-pdf`);
 the poem body font in `config.yaml` must be installed on this machine.
+
+Local OCR (`ocr_to_poem.py`) uses Apple's Vision framework via `swift`, so it
+requires **macOS with the Swift toolchain** (Xcode command-line tools). No API key.
 
 ## A note on images in git
 
@@ -79,9 +93,12 @@ The build stage refuses `verified: false` poems (config `build.block_on_unverifi
 so nothing unproofed can reach the printer.
 
 ### File naming during transcription
-- `poem-NNN.yaml` — clean draft (both passes agreed).
-- `poem-NNN.DRAFT.yaml` — needs human attention (passes disagreed / low confidence /
-  hand-entry required). Rename to `poem-NNN.yaml` once corrected.
+- `poem-NNN.yaml` — body captured; still `verified: false` until a human proofreads it.
+- `poem-NNN.DRAFT.yaml` — needs a human decision: multi-poem page, untitled continuation,
+  poem spanning images, duplicate to dedupe, or poor image. Rename to `poem-NNN.yaml`
+  once resolved.
+- `needs_manual_text: true` — a metadata-only stub whose body isn't in yet (content-filter
+  block or non-Latin script). The human hand-enters the text and flips it to `false`.
 
 ### Per-folder source metadata
 Each `images/hires/<book>/` folder has a `source.yaml` with the book's title,
@@ -111,14 +128,19 @@ plus per-face PDFs/PNGs in `build/faces/`.
 ## Status
 
 - **Stage 0 (scaffold):** done.
-- **Stage 1 (transcribe):** proven on a 7-poem test batch (5/7 clean on two-pass
-  agreement; 2 flagged for hand-correction). In-session for now; `transcribe.py`
-  API script still a stub.
+- **Stage 1 (transcribe):** intake swept across all books. **198 poems transcribed**
+  (ids run to poem-205; some are DRAFT/dedupe stubs), **0 pending**, **18
+  `needs_manual_text`** awaiting hand-entry (Rumi, Sappho, Shevchenko, Nezahualcóyotl,
+  one Sharon Olds; plus a few empty dedupe stubs). In-copyright bodies were captured
+  via local OCR-to-disk (`ocr_to_poem.py`); `transcribe.py` API script stays a stub.
+  Manifest is rebuilt from the poem files by `reconcile.py`.
 - **Stage 2 (render faces):** done — HTML/CSS → PDF via headless Chrome, JS
   auto-fit, EB Garamond, bleed + safe margins, configurable name corner.
 - **Stage 3 (assemble):** done — guests.xlsx → one-favor-per-page delivery PDF,
   with the verified-poem safety gate.
 
-Remaining before a real print run: fill `source.yaml` metadata, hand-fix
-poems 004 & 007, verify poems (`verified: true`), build the real `guests.xlsx`,
-move `images/hires/` to git-lfs, and pick a printer (confirm bleed/format).
+Remaining before a real print run: **proofread OCR'd bodies** and flip poems to
+`verified: true`, hand-enter the `needs_manual_text` poems, resolve the `DRAFT`
+files (dedupe/split), fill any missing `source.yaml` metadata, build the real
+`guests.xlsx`, and pick a printer (confirm bleed/format). Images are tracked in
+git-lfs (see `.gitattributes`).

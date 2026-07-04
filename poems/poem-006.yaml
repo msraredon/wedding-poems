@@ -1,28 +1,35 @@
 id: poem-006
-title: "LXXV"          # printed as the Roman numeral (Sonnet 75)
-author: "William Shakespeare"
-source: "william-shakespeare-shakespeares-sonnets"
+title: "Love Poem"
+author: "Audre Lorde"
+source: "Audre-Lorde_The-collected-poems"
 images:
-  - "william-shakespeare-shakespeares-sonnets/IMG_7452.heic"
-verified: false        # flip to true ONLY after a human proofreads against the photo
-verified_by: ""        # your name/initials when you verify
-verified_date: ""      # YYYY-MM-DD when you verify
+  - "Audre-Lorde_The-collected-poems/20260606_144339406_iOS.heic"
+verified: false
+verified_by: ""
+verified_date: ""
 notes: >-
-  Sonnet 75 — the poem that spans the page break in the photo. Two passes agree
-  exactly. IMPORTANT: this single photo also contains the tail of LXXIV and ALL
-  of LXXVI. Confirm LXXV is the sonnet you want (if you meant LXXVI, say so).
+  Single in-session transcription pass (automated second pass blocked by content
+  filter). Proofread against the photo before verifying.
 text: |
-  So are you to my thoughts as food to life,
-  Or as sweet-season'd showers are to the ground;
-  And for the peace of you I hold such strife
-  As 'twixt a miser and his wealth is found;
-  Now proud as an enjoyer, and anon
-  Doubting the filching age will steal his treasure;
-  Now counting best to be with you alone,
-  Then better'd that the world may see my pleasure:
-  Sometime all full with feasting on your sight,
-  And by and by clean starved for a look;
-  Possessing or pursuing no delight,
-  Save what is had, or must from you be took.
-  Thus do I pine and surfeit day by day,
-  Or gluttoning on all, or all away.
+  Speak earth and bless me with what is richest
+  make sky flow honey out of my hips
+  rigid as mountains
+  spread over a valley
+  carved out by the mouth of rain.
+
+  And I knew when I entered her I was
+  high wind in her forests hollow
+  fingers whispering sound
+  honey flowed
+  from the split cup
+  impaled on a lance of tongues
+  on the tips of her breasts on her navel
+  and my breath
+  howling into her entrances
+  through lungs of pain.
+
+  Greedy as herring-gulls
+  or a child
+  I swing out over the earth
+  over and over
+  again.

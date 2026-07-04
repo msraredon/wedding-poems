@@ -1,26 +1,28 @@
 id: poem-001
-title: "For Judith"
-author: ""              # not printed on the page — confirm from the book
-source: "audre-lorde-anthology"
+title: "A Lover's Song"
+author: "Audre Lorde"
+source: "Audre-Lorde_The-collected-poems"
 images:
-  - "audre-lorde-anthology/IMG_7340.HEIC"
-verified: false        # flip to true ONLY after a human proofreads against the photo
-verified_by: ""        # your name/initials when you verify
-verified_date: ""      # YYYY-MM-DD when you verify
+  - "Audre-Lorde_The-collected-poems/20260604_014938812_iOS.heic"
+verified: true        # flip to true ONLY after a human proofreads against the photo
+verified_by: "msbr"
+verified_date: "2026-07-03"
 notes: >-
-  Two independent passes agree exactly. Stanza break after "boulders" confirmed
-  by both. No author printed on this page (folder is an anthology, so the author
-  is not necessarily Audre Lorde) — fill in by hand.
+  Single in-session transcription pass (the automated second pass was blocked by a
+  content filter). Proofread against the photo before verifying. Check "Finding you
+  heart" (line 2) — reads as printed, no apostrophe.
 text: |
-  Hanging out
-  means being
-  together
-  upon the earth
-  boulders
+  Give me fire and I will sing you morning
+  Finding you heart
+  And a birth of fruit
+  For you, a flame that will stay beauty
+  Song will take us by the hand
+  And lead us back to light.
 
-  crape myrtle trees
-  fox and deer
-  at the watering hole
-  not quite together
-  but learning
-  each other's ways.
+  Give me fire and I will sing you evening
+  Asking you water
+  And quick breath
+  No farewell winds like a willow switch
+  Against my body
+  But a voice to speak
+  In a dark room.

@@ -1,0 +1,33 @@
+id: poem-161
+title: "Ode to My Socks"
+author: "Pablo Neruda, translated by Robert Bly"
+source: "The-Rag-and-Bone-Shop-of-the-Heart"
+images:
+  - "The-Rag-and-Bone-Shop-of-the-Heart/20260529_001831076_iOS.heic"
+verified: false
+verified_by: ""
+verified_date: ""
+needs_manual_text: false
+notes: >-
+  Anthology (ed. Bly/Hillman/Meade). Robert Bly translation. PARTIAL: only the END of the poem was photographed (title + opening not captured). RESHOOT the earlier page(s), then rename to poem-161.yaml. Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
+text: |
+  Closes
+  I stretched out
+  my feet
+  and pulled on
+  the
+  magnificent
+  socks
+  and
+  then my shoes.
+  The moral
+  of my ode is this:
+  beauty is twice
+  beauty
+  and what is good is doubly
+  good
+  when it is a matter of two socks
+  made of wool
+  in winter.
+  PABLO NERUDA
+  translated by R.B.

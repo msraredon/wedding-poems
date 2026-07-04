@@ -1,30 +1,34 @@
 id: poem-005
-title: "XV"             # printed as the Roman numeral (Sonnet 15)
-author: "William Shakespeare"
-source: "william-shakespeare-shakespeares-sonnets"
+title: "Moving In"
+author: "Audre Lorde"
+source: "Audre-Lorde_The-collected-poems"
 images:
-  - "william-shakespeare-shakespeares-sonnets/IMG_7381.HEIC"
-  - "william-shakespeare-shakespeares-sonnets/IMG_7382.HEIC"
-verified: false        # flip to true ONLY after a human proofreads against the photo
-verified_by: ""        # your name/initials when you verify
-verified_date: ""      # YYYY-MM-DD when you verify
+  - "Audre-Lorde_The-collected-poems/20260606_022304844_iOS.heic"
+verified: true
+verified_by: "msbr"
+verified_date: "2026-07-03"
 notes: >-
-  Sonnet 15, spanning two photos. Two passes agree exactly. Both correctly
-  EXCLUDED adjacent material present in the photos (the tail of XIV — "Thy end is
-  truth's and beauty's doom / and date." — and the head of XVI). "everything" is
-  printed as one word in this edition. Closing couplet is indented here.
+  Single in-session transcription pass (automated second pass blocked by content
+  filter). Opens with an italic epigraph (indented below the title).
 text: |
-  When I consider everything that grows
-  Holds in perfection but a little moment,
-  That this huge stage presenteth nought but shows
-  Whereon the stars in secret influence comment;
-  When I perceive that men as plants increase,
-  Cheered and check'd e'en by the self-same sky,
-  Vaunt in their youthful sap, at height decrease,
-  And wear their brave state out of memory;
-  Then the conceit of this inconstant stay
-  Sets you most rich in youth before my sight,
-  Where wasteful Time debateth with Decay
-  To change your day of youth to sullied night;
-      And, all in war with Time for love of you,
-      As he takes from you, I engraft you new.
+  "It is the worst of luck to bring
+  into a new house from the old
+  bread salt or broomstick."
+
+  Salt Bread and Broom
+  be still.
+  I leave you guardian
+  against gone places
+  I have loved
+  your loss
+  in a green promise
+  making new
+  Salt
+  Bread
+  and Broom
+  remove me from the was
+  I still am
+  to now
+  becoming
+  here this house
+  forever blessed.

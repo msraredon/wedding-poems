@@ -1,8 +1,0 @@
-# Source (book) metadata. Values below are best guesses — please CONFIRM.
-book_title: "Shakespeare's Sonnets"   # CONFIRM exact title on the book
-author: "William Shakespeare"
-translator: ""
-editor: ""                            # CONFIRM — which edited edition?
-publisher: ""                         # CONFIRM — edition matters (affects spellings, e.g. "everything")
-year: ""
-notes: "Contains poem-005 (Sonnet XV) and poem-006 (Sonnet LXXV)."

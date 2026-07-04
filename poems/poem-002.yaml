@@ -1,23 +1,28 @@
 id: poem-002
-title: ""               # not printed — excerpt, confirm how you want it titled
-author: ""              # not printed on the page
-source: "boy-mole-fox-horse"
+title: "Sowing"
+author: "Audre Lorde"
+source: "Audre-Lorde_The-collected-poems"
 images:
-  - "boy-mole-fox-horse/IMG_7130.HEIC"
-verified: false        # flip to true ONLY after a human proofreads against the photo
-verified_by: ""        # your name/initials when you verify
-verified_date: ""      # YYYY-MM-DD when you verify
+  - "Audre-Lorde_The-collected-poems/20260606_014712928_iOS.heic"
+verified: true
+verified_by: "msbr"
+verified_date: "2026-07-03"
 notes: >-
-  Handwritten-style font. Two passes agree exactly. Page shows only the page
-  number "3"; title/author not printed. Likely from "The Boy, the Mole, the Fox
-  and the Horse" by Charlie Mackesy — confirm before use.
+  Single in-session transcription pass (automated second pass blocked by content
+  filter). Proofread against the photo before verifying.
 text: |
-  "I'm so small," said
-  the mole.
-
-  "Yes," said
-  the boy.
-
-  "but you
-  make a huge
-  difference."
+  It is the sink of the afternoon
+  the children asleep or weary.
+  I have finished planting the tomatoes
+  in this brief sun after four days of rain
+  now there is brown earth under my fingernails
+  And sun full on my skin
+  with my head thick as honey
+  the tips of my fingers are stinging
+  from the rich earth
+  but more so from the lack of your body
+  I have been to this place before
+  where blood seething commanded
+  my fingers fresh from the earth
+  dream of plowing a furrow
+  whose name should be you.

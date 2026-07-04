@@ -1,19 +1,51 @@
 id: poem-003
-title: ""               # not printed on the crop
-author: ""              # not printed on the crop
-source: "haikus"
+title: "On a night of the full moon"
+author: "Audre Lorde"
+source: "Audre-Lorde_The-collected-poems"
 images:
-  - "haikus/IMG_7256.heic"
-verified: false        # flip to true ONLY after a human proofreads against the photo
-verified_by: ""        # your name/initials when you verify
-verified_date: ""      # YYYY-MM-DD when you verify
+  - "Audre-Lorde_The-collected-poems/20260606_014948827_iOS.heic"
+verified: true
+verified_by: "msbr"
+verified_date: "2026-07-03"
 notes: >-
-  Bilingual haiku: English translation, then Japanese (kanji/kana), then romaji.
-  Two passes agree exactly. Line 2 is indented in the original. Author not on the
-  crop — fill in by hand.
+  Single in-session transcription pass (automated second pass blocked by content
+  filter). One poem in two numbered sections (I and II), indented in the book.
+  Title set on two lines ("On a night" / "of the full moon").
 text: |
-  autumn's soaring sky!
-      would that I were riding the white clouds
+  I
+  Out of my flesh that hungers
+  and my mouth that knows
+  comes the shape I am seeking
+  for reason.
+  The curve of your body
+  fits my waiting hand
+  your flesh warm as sunlight
+  your lips quick as young birds
+  between your thighs the sweet
+  sharp taste of limes.
 
-  秋高し吾白雲に乗らんと思ふ
-  akitakashi ware shirakumo ni noran to mou
+  Thus I hold you
+  frank in my heart's eye
+  in my skin's knowing
+  as my fingers conceive your flesh
+  I feel your stomach
+  curving against me.
+
+  Before the moon wanes again
+  we shall come together.
+
+  II
+  And I would be the moon
+  spoken over your beckoning flesh
+  breaking against reservations
+  beaching thought
+  my hands at your high tide
+  over and under inside you
+  and the passing of hungers
+  attended, forgotten.
+
+  Darkly risen
+  the moon speaks
+  my eyes
+  judging your roundness
+  delightful.
