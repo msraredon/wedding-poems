@@ -9,14 +9,14 @@ verified_by: ""
 verified_date: ""
 needs_manual_text: false
 notes: >-
-  Untitled. In copyright. Wedding-appropriate (wanting the other not to complete but to combine — 'the two of us combined could set it on fire'). Complete on one page. NOTE: OCR captures the running 'rupi kaur' page-label as a stray line — delete it when proofreading. Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
+  Untitled. In copyright. Wedding-appropriate (wanting the other not to complete but to combine — 'the two of us combined could set it on fire'). Complete on one page. Structure proofread against the image: running head stripped and a stanza break added before 'and then'. Body auto-OCR'd locally via Apple Vision; wording still needs a human check (verified:false).
 text: |
-  rupi kaur
   i do not want to have you
   to fill the empty parts of me
   i want to be full on my own
   i want to be so complete
   i could light a whole city
+
   and then
   i want to have you
   cause the two of us combined

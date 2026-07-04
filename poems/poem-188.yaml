@@ -9,7 +9,7 @@ verified_by: ""
 verified_date: ""
 needs_manual_text: false
 notes: >-
-  Titled at foot: '- home'. In copyright. Self-sufficiency/self-love theme. Complete on one page. NOTE: OCR captures the running 'home body' page-label as a stray line — delete it when proofreading. Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
+  Titled at foot: '- home'. In copyright. Self-sufficiency/self-love theme. Complete on one page. Structure proofread against the image: running head stripped and foot-title '- home' removed (it's in the title field); single stanza. Body auto-OCR'd via Apple Vision; wording still needs a human check (verified:false).
 text: |
   i dive into the well of my body
   and end up in another world
@@ -17,5 +17,3 @@ text: |
   already exists in me
   there's no need
   to look anywhere else
-  - home
-  home body

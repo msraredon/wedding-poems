@@ -9,20 +9,21 @@ verified_by: ""
 verified_date: ""
 needs_manual_text: false
 notes: >-
-  Titled at foot: '- friendship nostalgia'. In copyright. About missing friends in adulthood — not romantic/wedding, but warm. Complete on one page. NOTE: OCR captures the running 'rupi kaur' page-label as a stray line — delete it when proofreading. Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
+  Titled at foot: '- friendship nostalgia'. In copyright. About missing friends in adulthood — not romantic/wedding, but warm. Complete on one page. Structure proofread against the image: running head stripped, foot-title '- friendship nostalgia' removed (it's in the title field), and the three stanza breaks restored (after 'that us' and after 'when we were just kids'). Note the book italicizes 'us' and 'just kids' — not captured in plain text. Body auto-OCR'd via Apple Vision; wording still needs a human check (verified:false).
 text: |
-  rupi kaur
   i miss the days my friends
   knew every mundane detail about my life
   and i knew every ordinary detail about theirs
   adulthood has starved me of that consistency
   that us
+
   the walks around the block
   the long conversations when we were
   too lost in the moment to care what time it was
   when we won and celebrated
   when we failed and celebrated harder
   when we were just kids
+
   now we have our very important jobs
   that fill up our very busy schedules
   we compare calendars just to plan coffee dates
@@ -32,4 +33,3 @@ text: |
   i miss knowing i once belonged
   to a group of people bigger than myself
   that belonging made life easier to live
-  - friendship nostalgia

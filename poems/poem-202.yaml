@@ -9,10 +9,8 @@ verified_by: ""
 verified_date: ""
 needs_manual_text: false
 notes: >-
-  From the anthology 'All We Know of Pleasure' (ed. Enid Shomer). Dedication under the title: 'for Richard'. Two-page spread captured in one image (left column then short right-page continuation ending '...is come close and touch me.'). In copyright. Narrative/erotic — probably not wedding-appropriate. Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
+  From the anthology 'All We Know of Pleasure' (ed. Enid Shomer). Dedication under the title: 'for Richard'. Two-page spread captured in one image (left column then short right-page continuation ending '...is come close and touch me.'). In copyright. Narrative/erotic — probably not wedding-appropriate. Structure proofread: removed the OCR'd title/author header (kept the 'for Richard' dedication line); it is one continuous verse paragraph (no stanza break at the page turn). Several OCR letter-errors still need fixing against the page (e.g. 'co'->'to', 'chat'->'that', 'is would'->'it would', 'in Aame'->'in flame', 'couch'->'touch', 'wecks'->'weeks') — not fixed here because the model must not retype in-copyright text. verified:false.
 text: |
-  Fast Gas
-  DORIANNE LAUX
   for Richard
   Before the days of self service.
   when you never had to pump your own gas,

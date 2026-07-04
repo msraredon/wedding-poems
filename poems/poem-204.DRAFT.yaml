@@ -9,10 +9,8 @@ verified_by: ""
 verified_date: ""
 needs_manual_text: false
 notes: >-
-  From the anthology 'All We Know of Pleasure' (ed. Enid Shomer). Two-page spread captured in one image (left page has title+start; right page continues '...beyond the body itself, we are making love.'). In copyright. Erotic but tender ('we are making love beyond the body itself'). Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
+  From the anthology 'All We Know of Pleasure' (ed. Enid Shomer). Two-page spread captured in one image (left page has title+start; right page continues '...beyond the body itself, we are making love.'). In copyright. Erotic but tender ('we are making love beyond the body itself'). DRAFT — the OCR BADLY INTERLEAVED this two-page spread: the left page's long lines cross the x-midline and the faint right-page text bled in, so the column sort mixed line order (e.g. 'looking at each other.' landed too early). Removed the OCR'd title/author header and a trailing '* * *' divider, but the LINE ORDER IS UNRELIABLE and there are OCR letter-errors ('che', 'chat', 'couching', 'Iam'). Best fix: re-shoot each page separately and re-OCR, or hand-retype from the book. Not reordered here because the model must not retype in-copyright text. verified:false.
 text: |
-  The Knowing
-  SHARON OLDS
   looking at each other.
   Afterwards, when we have slept, paradise-
   comaed, and woken, we lie a long time
@@ -42,7 +40,6 @@ text: |
   with our faces turned fully to face each other,
   and then the upper eye's tears
   hit the sheet, as if it is an early day on earth,
-  66
   braid and sluice down through the lower eyebrow
   like che invention of farming, irrigation, a non-nomadic
   people.
@@ -59,4 +56,3 @@ text: |
   this place beyond the other places,
   beyond the body itself, we are making
   love.
-  * * *

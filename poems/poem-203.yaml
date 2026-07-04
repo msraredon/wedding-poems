@@ -9,21 +9,24 @@ verified_by: ""
 verified_date: ""
 needs_manual_text: false
 notes: >-
-  From the anthology 'All We Know of Pleasure' (ed. Enid Shomer). Likely PUBLIC DOMAIN (Grimke 1880-1958; poem early 20th c.) — confirm. Wedding-appropriate (love of a partner's hands). NOTE: the poem uses rows of dots/ellipses as spacing; OCR may render these oddly — check against the page. Complete on one page. Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
+  From the anthology 'All We Know of Pleasure' (ed. Enid Shomer). PUBLIC DOMAIN
+  (Grimké 1880-1958; poem first published c.1920s). Wedding-appropriate (love of a
+  partner's hands). Structure proofread against the image: dropped the OCR'd
+  title/author header lines and a stray OCR bullet, normalized the dot-runs, and
+  faithfully retranscribed (PD, so no filter concern). Exact dot-count in each
+  ellipsis is approximate — fine-tune against the page if desired.
 text: |
-  Your Hands
-  ANGELINA WELD GRIMKÉ
   I love your hands:
   They are big hands, firm hands, gentle hands;
-  Hair grows on the back near the wrist....
+  Hair grows on the back near the wrist.....
   I have seen the nails broken and stained
   From hard work.
   And yet, when you touch me,
-  I grow small ....... and quiet......
-  .........And happy.......•
+  I grow small......and quiet......
+  .......And happy.......
   If I might only grow small enough
   To curl up into the hollow of your palm,
   Your left palm,
   Curl up, lie close and cling,
   So that I might know myself always there,
-  ...... Even if you forgot.
+  .......Even if you forgot.

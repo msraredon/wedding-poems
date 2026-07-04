@@ -11,7 +11,6 @@ needs_manual_text: false
 notes: >-
   Titled at foot: '(ode to amrita sher-gil's village scene 1938)'. In copyright. Prose-block poem (justified paragraph) about lineage/ancestral women — likely NOT wedding-appropriate but beautiful. Complete on one page (facing an illustration). NOTE: this is a running prose block, so line breaks in the OCR are artifacts of the justified setting, not real line breaks — reflow when proofreading. OCR also captures the running 'rupi kaur' page-label as a stray line — delete it. Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
 text: |
-  rupi kaur
   i am the first woman in my lineage with freedom of
   choice. to craft her future whichever way i choose. say
   what is on my mind when i want to. without the whip of
@@ -25,5 +24,4 @@ text: |
   in the afterlife. sipping on steaming glasses of milky
   masala chai. how wild it must be for them to see one of
   their own living so boldly.
-  211
   lode to amrita sher-gi's village scene 1938)
