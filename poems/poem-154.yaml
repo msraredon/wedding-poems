@@ -12,7 +12,6 @@ needs_manual_text: false
 notes: >-
   Anthology (ed. Bly/Hillman/Meade). Public domain (Keats). Three numbered stanzas (1,2,3) spanning two pages. Verify the numeral section-breaks and 11-line stanza structure when proofreading. Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
 text: |
-  TO AUTUMN
   I
   Season of mists and mellow fruitfulness,
   Close bosom-friend of the maturing sun;
@@ -49,4 +48,3 @@ text: |
   Hedge-crickets sing; and now with treble soft
   The red-breast whistles from a garden-croft;
   And gathering swallows twitter in the skies.
-  JOHN KEATS

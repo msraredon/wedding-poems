@@ -11,9 +11,6 @@ needs_manual_text: false
 notes: >-
   Anthology (ed. Bly/Hillman/Meade). In-copyright. The italic editorial headnote at the TOP ("West Wall (W.S. Merwin) and Ripening (Wendell Berry)...") is NOT part of the poem — drop it. Complete on one page; wedding-appropriate (apricots ripening, love for a person and the world). Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
 text: |
-  for a person with love for the world; both ripen together.
-  Vest Wall" (W. S. Mervin) and "Ripening" (Wendell Berry) merge love
-  WEST WALL
   In the unmade light I can see the world
   as the leaves brighten I see the air
   the shadows melt and the apricots appear
@@ -28,4 +25,3 @@ text: |
   or knowing the ripeness of the lucid air
   or touching the apricots in your skin
   or tasting in your mouth the sun in the apricots
-  W. S. MERWIN

@@ -11,10 +11,6 @@ needs_manual_text: false
 notes: >-
   Anthology (ed. Bly/Hillman/Meade). In-copyright (US). Excerpt = sections I and II, across a two-page spread. NOTE: the italic line at the very top ("Events of the green day are transposed...") belongs to the PRECEDING selection, not this poem — drop it when proofreading. Keep the I / II section numerals and couplet breaks. Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
 text: |
-  ment of imaginative language.
-  Events of the green day are transposed to another key by the blue instru.
-  from
-  THE MAN WITH THE BLUE GUITAR
   I
   The man bent over his guitar,
   A shearsman of sorts. The day was green.
@@ -36,4 +32,3 @@ text: |
   Is to miss, by that, things as they are,
   Say that it is the serenade
   Of a man that plays a blue guitar.
-  WALLACE STEVENS

@@ -9,9 +9,8 @@ verified_by: ""
 verified_date: ""
 needs_manual_text: false
 notes: >-
-  In-copyright. Complete on one page (p.193). Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
+  In-copyright. Complete on one page (p.193). Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation. STRUCTURE: removed OCR'd title/byline. Line ORDER looks scrambled and one line has a stray leading '8' — verify against the page before use.
 text: |
-  THERE YOU ARE
   this cold day
   There you are
   hawthorn, rose;
@@ -27,5 +26,3 @@ text: |
   that, although you haven't said it yet,
   in case they help, these things you do
   your heart in your hands at the table
-  There You Are
-  BY Victoria Adukwei Bulley

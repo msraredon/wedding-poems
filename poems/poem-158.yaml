@@ -11,7 +11,6 @@ needs_manual_text: false
 notes: >-
   Anthology (ed. Bly/Hillman/Meade). Public domain (Whitman). Complete on one page; long lines wrap with hanging indents. Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
 text: |
-  A GLIMPSE
   A glimpse, through an interstice caught,
   Of a crowd of workmen and drivers in a bar-room, around
   the stove, late of a winter night-and I unremarked,
@@ -23,4 +22,3 @@ text: |
   drinking and oath and smutty jest,
   There we two, content, happy in being together, speaking
   little, perhaps not a word.
-  WALT WHITMAN

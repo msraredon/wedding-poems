@@ -9,10 +9,8 @@ verified_by: ""
 verified_date: ""
 needs_manual_text: false
 notes: >-
-  In-copyright. Complete on one page (p.171). Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
+  In-copyright. Complete on one page (p.171). Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation. STRUCTURE: removed OCR'd title/byline/foot-title (in fields). Remaining OCR typo to fix: 'Lopen my face' -> 'I open my face'.
 text: |
-  Sudden Journey
-  BY Tess Gallagher
   Maybe I'm seven in the open field—
   the straw-grass so high
   only the top of my head makes a curve
@@ -29,4 +27,3 @@ text: |
   to gulp, turning with my tongue, my arms out
   running, running in the hard, cold plenitude
   of all those who reach earth by falling.
-  SUDDEN JOURNEY

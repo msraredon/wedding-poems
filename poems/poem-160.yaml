@@ -11,12 +11,6 @@ needs_manual_text: false
 notes: >-
   Anthology (ed. Bly/Hillman/Meade). Robert Bly translation (in-copyright). The italic editorial headnote at the TOP ("As Spender tells of an ambition...") is NOT part of the poem — drop it when proofreading. Poem is two stanzas. Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
 text: |
-  As Spender tells of an "ambition…. clothed from head to foot in song."
-  Rilke imagines the very being of man as a great song. And both say that
-  for this song to sing through you, to be you, you must live life ever more
-  widely. And that is just what ambition means: walking the ambir, going
-  the limits of the perimeter in ever-growing orbits.
-  I LIVE MY LIFE
   I live my life in growing orbits,
   which move out over the things of the world.
   Perhaps I can never achieve the last,
@@ -25,5 +19,3 @@ text: |
   and I have been circling for a thousand years,
   and I still don't know if I am a falcon, or a storm,
   or a great song.
-  RAINER MARIA RILKE
-  translated by R.B.

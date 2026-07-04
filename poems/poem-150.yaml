@@ -9,11 +9,8 @@ verified_by: ""
 verified_date: ""
 needs_manual_text: false
 notes: >-
-  Anthology (ed. Bly/Hillman/Meade). In-copyright. Complete on one page (p.46). Prose-poem; long lines wrap — check wrapping when proofreading. Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation.
+  Anthology (ed. Bly/Hillman/Meade). In-copyright. Complete on one page (p.46). Prose-poem; long lines wrap — check wrapping when proofreading. Body auto-OCR'd locally via Apple Vision from the photo(s) because the model's content filter blocked verbatim transcription. PROOFREAD against the book — OCR drops blank/stanza breaks and indentation and may miss punctuation. STRUCTURE: removed OCR'd title/author/source headers, but the opening justified-prose block (~first 6 lines) is OCR-SCRAMBLED (split hyphenation out of order) — re-shoot or hand-fix that section.
 text: |
-  D
-  MEN AND BIRTH:
-  THE UNEXPLAINABLE
   malepractice and malcabsence issue is loneliness & limiting to-
   ers, fathers, menfriends should be with their wives, women
   morrows. men need to experience rising screams, husbands, lov-
@@ -43,5 +40,3 @@ text: |
   men to feel & touch & experience
   a source of love that springs in
   smiles occasional tears and undying commitment.
-  HAKI R. MADHUBUTI
-  The Rag and Bone Shop of the Heart
